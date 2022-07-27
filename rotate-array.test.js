@@ -7,7 +7,8 @@
  */
 
 const rotate = (nums, k) => {
-  return nums.concat(nums).slice(-(nums.length + k), nums.length * 2 - k);
+  nums = nums.concat(nums).slice(-(nums.length + k), nums.length * 2 - k);
+  return nums;
 };
 
 describe('Rotating an array', () => {
