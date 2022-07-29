@@ -9,14 +9,12 @@ const intersect = (nums1, nums2) => {
   const cache = {};
   const result = [];
   for (const num of nums1) {
-    if (cache[num]) {
-      cache[num]++;
-    } else cache[num] = 1;
+    cache[num] = cache[num] ? ++cache[num] : 1;
   }
   for (const num of nums2) {
     if (cache[num] > 0) {
       result.push(num);
-      cache[num] -= 1;
+      cache[num]--;
     }
   }
   return result;
