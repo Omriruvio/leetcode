@@ -2,7 +2,7 @@
 
 const reverse = (x) => {
   let isNegative;
-  result = x;
+  let result = x;
   if (x < 0) {
     isNegative = true;
     result = Math.abs(x);
