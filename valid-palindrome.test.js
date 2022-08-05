@@ -3,8 +3,6 @@ const isPalindrome = (str) => {
   return normalized === normalized.split('').reverse().join('');
 };
 
-// isPalindrome('A man, a plan, a canal: Panama');
-
 describe('Checks if a valid palindrome', () => {
   it('Returns true or false for valid/invalid palindromes', () => {
     expect(isPalindrome('A man, a plan, a canal: Panama')).toBeTruthy();
